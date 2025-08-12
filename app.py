@@ -53,7 +53,7 @@ with st.container():
                 try:
                     response = model.generate_content(prompt_completo)
                     st.session_state.texto_final = response.text
-                    st.experimental_rerun()
+                    st._rerun()
                 except Exception as e:
                     st.error(f"Ocorreu um erro ao chamar a API do Gemini: {e}")
         else:
